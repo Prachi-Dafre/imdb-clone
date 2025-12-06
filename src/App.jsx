@@ -1,6 +1,6 @@
 import React from "react";
 import MovieCard from "./components/MovieCard";
-
+import Timer from "./components/Timer";
 
 const movies = [
   {
@@ -26,8 +26,10 @@ const movies = [
 const App = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-10">
+
       <h1 className="text-3xl font-bold mb-6">Movie List</h1>
 
+      {/* Movie List */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {movies.map((movie, index) => (
           <MovieCard
@@ -39,6 +41,12 @@ const App = () => {
           />
         ))}
       </div>
+
+      {/* Timer Component */}
+      <div className="mt-10">
+        <Timer />
+      </div>
+
     </div>
   );
 };
